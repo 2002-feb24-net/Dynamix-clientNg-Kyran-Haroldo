@@ -11,7 +11,7 @@ pool:
 
 stages:
 
--stage: BuildNg
+- stage: BuildNg
 
   variables:
     nodeVersion: 13.x
