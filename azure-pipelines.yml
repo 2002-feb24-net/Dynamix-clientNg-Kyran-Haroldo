@@ -15,7 +15,7 @@ stages:
 
   variables:
     nodeVersion: 13.x
-    appDir: Dynamix/Dynamix.Angular/Dynamix.p2-Angular
+    appDir: Dynamix.p2-Angular
     
 
   jobs:
