@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/w3css/3/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  </head>
+
+
+  <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <!-- <input type="hidden" name="ReviewID" #ReviewID="ngModel" [(ngModel)]="service.formData.ReviewID"> -->
+
+    <div class="form-group">
+      <label style="color: white;">Creator</label>
+      <input name="CreatorID" #CreatorID="ngModel" [(ngModel)]="service.formData.CreatorUserID" class="form-control" required>
+
+    </div>
+
+    <div class="form-group">
+      <label style="color: white;">Title</label>
+      <input name="Title" #Title="ngModel" [(ngModel)]="service.formData.Title" class="form-control" required>
+
+    </div>
+    <div class="form-group">
+      <label style="color: white;">Comment</label>
+      <input name="Comment" #Comment="ngModel" [(ngModel)]="service.formData.ReviewText" class="form-control">
+
+    </div>
+
+    <div class="form-group">
+      <label style="color: white;">Location</label>
+      <input name="LocationID" #LocationID="ngModel" [(ngModel)]="service.formData.LocationID" class="form-control">
+
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label style="color: white;">Photo</label>
+        <input name="ReviewURL" #ReviewURL="ngModel" [(ngModel)]="service.formData.ReviewImageURL" class="form-control">
+
+      </div>
+      <div class="form-group  col-md-6">
+        <label style="color: white;">Rating</label>
+        <input name="RatingID" #RatingID="ngModel" [(ngModel)]="service.formData.RatingEmojiID" class="form-control">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+    </div>
+
+  </form>
+
+
+</html>

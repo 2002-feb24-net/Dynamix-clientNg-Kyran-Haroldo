@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/w3css/3/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/dashboard" style="font-size: 25px; text-decoration: none">Dynamix</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a onclick="document.getElementById('id01').style.display='block'"><span class="glyphicon glyphicon-log-in" routerLink=""></span> Login</a></li>
+        <form class="jumbtron">
+          <h1 class="display-4 text-center" style="color: white;">Reviews</h1>
+          <hr>
+          <div class="form-group">
+            <div class="col-md-6">
+              <app-review></app-review>
+            </div>
+            <div class="col-md-7">
+              <app-review-list></app-review-list>>
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <img class="homePhotos" src="https://wallpapershome.com/images/pages/pic_h/378.jpg" style="width:100%">
+        </div>
+      </ul>
+    </div>
+  </nav>
+  </body>
+  </html>

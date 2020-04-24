@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" routerLink="/dashboard" style="font-size: 25px; text-decoration: none">Dynamix</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li routerLink="/sign-up"><a><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <input type="hidden" name="EmployeeID" #UserId="ngModel" [(ngModel)]="commentService.formData.CommentID">
+  <div class="form-group">
+    <label style="color:black">Full Name</label>
+    <input name="CommentText" #CommentText="ngModel" [(ngModel)]="commentService.formData.CommentText" class="form-control" required>
+    <div class="validation-error" *ngIf="CommentText.invalid && CommentText.touched">This field is required.</div>
+
+  </div>
+  <div class="form-group">
+    <label style="color:black">ReviewID</label>
+    <input name="ReviewID" #ReviewID="ngModel" [(ngModel)]="commentService.formData.ReviewID" class="form-control" required>
+    <div class="validation-error" *ngIf="ReviewID.invalid && ReviewID.touched">ReviewID is required.</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label style="color:black">UserID</label>
+      <input name="UserID" #UserID="ngModel" [(ngModel)]="commentService.formData.UserID" class="form-control" required>
+      <div class="validation-error" *ngIf="UserID.invalid && UserID.touched">This field is required.</div>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+  </div>
+  </form>
+
+</body>
+</html>

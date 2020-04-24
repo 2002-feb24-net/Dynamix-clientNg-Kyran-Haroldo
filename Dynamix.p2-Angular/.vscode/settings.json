@@ -1,0 +1,26 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "None",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#07340f",
+        "titleBar.activeBackground": "#010702",
+        "titleBar.activeForeground": "#e7e7e7",
+        "activityBar.activeBackground": "#07340f",
+        "activityBar.activeBorder": "#593ae5",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#593ae5",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#010702",
+        "statusBar.border": "#010702",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#07340f",
+        "titleBar.border": "#010702",
+        "titleBar.inactiveBackground": "#01070299",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#010702"
+}

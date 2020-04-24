@@ -1,0 +1,9 @@
+<<table class="table table-hover">
+  <tr *ngFor="let emp of service.list">
+    <td (click)="populateForm(emp)">[{{emp.ReviewID}}]-{{emp.ReviewURL}}</td>
+    <td (click)="populateForm(emp)">{{emp.Title}}</td>
+    <td (click)="populateForm(emp)">{{emp.ReviewComment}}</td>
+    <td (click)="populateForm(emp)">{{emp.LocationID}}</td>
+    <td><button (click)="onDelete(emp.ReviewID)" class="btn btn-sm btn-outline-danger">X</button></td>
+  </tr>
+</table>
